@@ -9,7 +9,7 @@ spec:
   prune: true
   retryInterval: 2m0s
   sourceRef:
-    kind: GitRepository
+    kind: HelmRepository
     name: policy-controller
   targetNamespace: default
   timeout: 3m0s
