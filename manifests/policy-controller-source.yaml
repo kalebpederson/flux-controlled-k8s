@@ -5,4 +5,4 @@ metadata:
   namespace: default
 spec:
   interval: 30m
-  url: https://github.com/sigstore/helm-charts/tree/main/charts/policy-controller
+  url: https://sigstore.github.io/helm-charts
