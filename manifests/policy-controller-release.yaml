@@ -14,10 +14,10 @@ spec:
         name: policy-controller
         namespace: system-policy
       interval: 1m
-      install:
-        disableWait: true
-      upgrade:
-        disableWait: true
+  install:
+    disableWait: true
+  upgrade:
+    disableWait: true
   values:
     webhook.replicaCount: 1
 
