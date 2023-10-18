@@ -5,20 +5,22 @@ metadata:
   namespace: system-policy
 spec:
   interval: 30m
+  targetNamespace: system-policy
+  releaseName: policy-controller
+  install:
+    disableWait: true
+    crds: CreateReplace
+  upgrade:
+    disableWait: true
+    crds: CreateReplace
   chart:
     spec:
       chart: policy-controller
       version: 0.6.5
       sourceRef:
         kind: HelmRepository
-        name: policy-controller
-        namespace: system-policy
-      interval: 1m
-  install:
-    disableWait: true
-  upgrade:
-    disableWait: true
+        name: sigstore
+        namespace: flux-system
+      interval: 60m
   values:
     webhook.replicaCount: 1
-
-
