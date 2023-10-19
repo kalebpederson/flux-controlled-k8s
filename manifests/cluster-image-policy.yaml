@@ -1,0 +1,28 @@
+apiVersion: policy.sigstore.dev/v1beta1
+kind: ClusterImagePolicy
+metadata:
+  name: image-policy
+spec:
+  images:
+  - glob: "**"
+  authorities:
+    - name: fixed-sig-key
+      key:
+        hashAlgorithm: sha256
+        data: |
+          -----BEGIN PUBLIC KEY-----
+          MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/d1CWZTcUW6AKfelUL5gSqEtIPTY
+          2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
+          -----END PUBLIC KEY-----
+#      attestations:
+#      - name: custom-match-predicate
+#        predicateType: https://cosign.sigstore.dev/attestation/v1
+#        policy:
+#          type: cue
+#          data: |
+#            predicateType: "https://cosign.sigstore.dev/attestation/v1"
+#            predicate: "foobar key e2e test"
+# We can also do something more dynamic, where we refer to the public key
+# directly in Key Vault:
+#    - key:
+#        kms: azurekms://cosign-storage-kv2.vault.azure.net/cosignkey
