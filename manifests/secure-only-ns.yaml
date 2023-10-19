@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   name: secure-only
   labels:
-    policy.sigstore.dev/include: true
+    policy.sigstore.dev/include: "true"
+

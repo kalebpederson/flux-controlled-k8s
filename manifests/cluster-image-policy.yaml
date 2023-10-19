@@ -6,14 +6,14 @@ spec:
   images:
   - glob: "**"
   authorities:
-    - name: fixed-sig-key
-      key:
-        hashAlgorithm: sha256
-        data: |
-          -----BEGIN PUBLIC KEY-----
-          MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/d1CWZTcUW6AKfelUL5gSqEtIPTY
-          2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
-          -----END PUBLIC KEY-----
+  - name: signed-by-kv-cosign-key
+    key:
+      hashAlgorithm: sha256
+      data: |
+        -----BEGIN PUBLIC KEY-----
+        MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/d1CWZTcUW6AKfelUL5gSqEtIPTY
+        2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
+        -----END PUBLIC KEY-----
 #      attestations:
 #      - name: custom-match-predicate
 #        predicateType: https://cosign.sigstore.dev/attestation/v1
