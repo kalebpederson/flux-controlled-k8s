@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: OCIRepository
 metadata:
-  name: kpp-acr
+  name: kpp-acr-repository
   namespace: flux-system
 spec:
   provider: generic
