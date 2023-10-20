@@ -16,13 +16,10 @@ spec:
         2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
         -----END PUBLIC KEY-----
   - name: signed-by-stefanprodan-cosign-key
-    key:
-      hashAlgorithm: sha384
-      data: |
-        -----BEGIN PUBLIC KEY-----
-        MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEST+BqQ1XZhhVYx0YWQjdUJYIG5Lt
-        iz2+UxRIqmKBqNmce2T+l45qyqOs99qfD7gLNGmkVZ4vtJ9bM7FxChFczg==
-        -----END PUBLIC KEY-----
+    keyless:
+      identities:
+        - issuer: https://token.actions.githubusercontent.com 
+          subjectRegExp: "https://github\.com/stefanprodan/.*"
 #      attestations:
 #      - name: custom-match-predicate
 #        predicateType: https://cosign.sigstore.dev/attestation/v1
