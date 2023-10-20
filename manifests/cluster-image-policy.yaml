@@ -19,7 +19,8 @@ spec:
     keyless:
       identities:
         - issuer: https://token.actions.githubusercontent.com 
-          subjectRegExp: "https://github\\.com/stefanprodan/.*"
+          subjectRegExp: >
+            https://github\.com/stefanprodan/.*
 #      attestations:
 #      - name: custom-match-predicate
 #        predicateType: https://cosign.sigstore.dev/attestation/v1
