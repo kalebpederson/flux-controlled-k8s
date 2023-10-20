@@ -17,7 +17,7 @@ spec:
         -----END PUBLIC KEY-----
   - name: signed-by-stefanprodan-cosign-key
     key:
-      hashAlgorithm: sha256
+      hashAlgorithm: sha384
       data: |
         -----BEGIN PUBLIC KEY-----
         MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEST+BqQ1XZhhVYx0YWQjdUJYIG5Lt
