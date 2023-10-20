@@ -19,7 +19,7 @@ spec:
     keyless:
       identities:
         - issuer: https://token.actions.githubusercontent.com
-          subjectRegExp: https://github.com/stefanprodan/podinfo/.*
+          subject: https://github.com/stefanprodan/podinfo/.github/workflows/release.yml@refs/tags/6.5.2
 #      attestations:
 #      - name: custom-match-predicate
 #        predicateType: https://cosign.sigstore.dev/attestation/v1
