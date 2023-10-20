@@ -6,13 +6,22 @@ spec:
   images:
   - glob: "**"
   authorities:
-  - name: signed-by-kv-cosign-key
+    # either of the keys below is reasonable
+  - name: signed-by-personal-cosign-key
     key:
       hashAlgorithm: sha256
       data: |
         -----BEGIN PUBLIC KEY-----
         MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/d1CWZTcUW6AKfelUL5gSqEtIPTY
         2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
+        -----END PUBLIC KEY-----
+  - name: signed-by-stefanprodan-cosign-key
+    key:
+      hashAlgorithm: sha256
+      data: |
+        -----BEGIN PUBLIC KEY-----
+        MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEST+BqQ1XZhhVYx0YWQjdUJYIG5Lt
+        iz2+UxRIqmKBqNmce2T+l45qyqOs99qfD7gLNGmkVZ4vtJ9bM7FxChFczg==
         -----END PUBLIC KEY-----
 #      attestations:
 #      - name: custom-match-predicate
