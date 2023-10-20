@@ -11,4 +11,4 @@ spec:
     name: flux-acr-registry
   url: oci://kppmetadatatesting.azurecr.io/kaleb/appinsightstest
   ref:
-    tag: latest
+    digest: "sha256:3b796305c274abde2bce09594b64d2bc9c8cf297b862b06a5d79c2f6a79ca3a0"
