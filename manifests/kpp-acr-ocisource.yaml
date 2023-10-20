@@ -8,8 +8,7 @@ spec:
   provider: generic
   interval: 5m0s
   secretRef:
-    name: acr-registry
-    namespace: default
+    name: flux-acr-registry
   url: oci://kppmetadatatesting.azurecr.io/kaleb/appinsightstest
   ref:
     tag: latest
