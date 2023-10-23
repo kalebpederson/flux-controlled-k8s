@@ -17,22 +17,11 @@ spec:
         -----END PUBLIC KEY-----
     attestations:
     - name: must-have-spdx-sbom
-      predicateType: https://spdx.dev/Document
+      predicateType: spdx
       policy:
         type: cue
         data: |
           predicateType: "https://spdx.dev/Document" 
-#    - name: must-have-e2e-tests
-#      predicateType: https://cosign.sigstore.dev/attestation/v1
-#      policy:
-#        type: rego
-#        data: |
-#          package sigstore
-#          default isCompliant = false
-#          isCompliant {
-#            input.predicateType == "https://cosign.sigstore.dev/attestation/v1"
-#            input.predicate == "e2e-tests"
-#          }
   - name: signed-by-stefanprodan-cosign-key
     keyless:
       identities:
@@ -50,3 +39,15 @@ spec:
 # directly in Key Vault:
 #    - key:
 #        kms: azurekms://cosign-storage-kv2.vault.azure.net/cosignkey
+# Or do something different:
+#    - name: must-have-e2e-tests
+#      predicateType: https://cosign.sigstore.dev/attestation/v1
+#      policy:
+#        type: rego
+#        data: |
+#          package sigstore
+#          default isCompliant = false
+#          isCompliant {
+#            input.predicateType == "https://cosign.sigstore.dev/attestation/v1"
+#            input.predicate == "e2e-tests"
+#          }
