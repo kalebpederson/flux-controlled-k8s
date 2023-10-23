@@ -15,7 +15,7 @@ spec:
         MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/d1CWZTcUW6AKfelUL5gSqEtIPTY
         2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
         -----END PUBLIC KEY-----
-   attestations:
+    attestations:
     - name: must-have-spdx-sbom
       predicateType: https://spdx.dev/Document
       policy:
