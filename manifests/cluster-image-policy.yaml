@@ -17,7 +17,7 @@ spec:
         -----END PUBLIC KEY-----
     attestations:
     - name: must-have-spdx-sbom
-      predicateType: spdx
+      predicateType: spdxjson
       policy:
         type: cue
         data: |
