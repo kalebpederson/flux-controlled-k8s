@@ -15,13 +15,13 @@ spec:
         MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/d1CWZTcUW6AKfelUL5gSqEtIPTY
         2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
         -----END PUBLIC KEY-----
-#   attestations:
-#    - name: must-have-spdx-sbom
-#      predicateType: https://spdx.dev/Document
-#      policy:
-#        type: cue
-#        data: |
-#          predicateType: "https://spdx.dev/Document" 
+   attestations:
+    - name: must-have-spdx-sbom
+      predicateType: https://spdx.dev/Document
+      policy:
+        type: cue
+        data: |
+          predicateType: "https://spdx.dev/Document" 
 #    - name: must-have-e2e-tests
 #      predicateType: https://cosign.sigstore.dev/attestation/v1
 #      policy:
