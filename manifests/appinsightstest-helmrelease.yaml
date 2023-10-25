@@ -10,8 +10,8 @@ spec:
       chart: app-insights-test
       reconcileStrategy: ChartVersion
       sourceRef:
-        kind: OCIRepository
-        name: tts-sh-ocirepo
+        kind: HelmRepository
+        name: app-insights-helm-repo
         namespace: flux-system
   interval: 1m0s
   targetNamespace: secure-only
