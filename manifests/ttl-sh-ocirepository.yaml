@@ -1,0 +1,18 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: ttl-sh-ocirepo
+  namespace: flux-system
+spec:
+  provider: generic
+  interval: 5m0s
+  secretRef:
+    name: flux-acr-registry
+  url: oci://ttl.sh/kaleb/charts/app-insights-test/app-insights-test
+  ref:
+    semver: "*"
+  verify:
+    provider: cosign
+    secretRef:
+      name: cosign-public-key
