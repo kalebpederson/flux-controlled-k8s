@@ -10,11 +10,8 @@ spec:
   - name: signed-by-personal-cosign-key
     key:
       hashAlgorithm: sha256
-      data: |
-        -----BEGIN PUBLIC KEY-----
-        MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/d1CWZTcUW6AKfelUL5gSqEtIPTY
-        2dYyiDBSlDbSqxmQulI/3y3hTocqHaImJrtn5ngb6aUbk7MTgFLhrAfx5Q==
-        -----END PUBLIC KEY-----
+      secretRef:
+        name: cosign-public-key
     attestations:
     - name: must-have-spdx-sbom
       predicateType: spdxjson
