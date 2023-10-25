@@ -6,4 +6,4 @@ metadata:
 spec:
   type: "oci"
   interval: 30m
-  url: oci://ttl.sh/kaleb/charts/app-insights-test/app-insights-test
+  url: oci://ttl.sh/kaleb/charts/app-insights-test
