@@ -9,7 +9,7 @@ spec:
   interval: 5m0s
   secretRef:
     name: flux-acr-registry
-  url: oci://ttl.sh/kaleb/98456748971649817436/charts
+  url: oci://ttl.sh/kaleb/98456748971649817436/charts/custom-alpine
   ref:
     semver: "*"
   verify:
