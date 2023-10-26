@@ -9,7 +9,7 @@ spec:
   interval: 5m0s
   secretRef:
     name: flux-acr-registry
-  url: oci://ttl.sh/kaleb/charts/app-insights-test/app-insights-test
+  url: oci://ttl.sh/kaleb/98456748971649817436/charts
   ref:
     semver: "*"
   verify:
