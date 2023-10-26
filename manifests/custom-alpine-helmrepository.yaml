@@ -7,7 +7,3 @@ spec:
   type: "oci"
   interval: 30m
   url: oci://ttl.sh/kaleb/98456748971649817436/charts
-  verify:
-    provider: cosign
-    secretRef:
-      name: cosign-public-key
