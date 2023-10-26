@@ -13,6 +13,10 @@ spec:
         kind: HelmRepository
         name: custom-alpine-helm-repo
         namespace: flux-system
+      verify:
+        provider: cosign
+        secretRef:
+          name: cosign-public-key
   interval: 1m0s
   targetNamespace: secure-only
   timeout: 10m
