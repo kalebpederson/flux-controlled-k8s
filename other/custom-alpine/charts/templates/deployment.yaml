@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "custom-alpine.fullname" . }}-custom-alpine
+  labels:
+    app: custom-alpine
+  {{- include "custom-alpine.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.customAlpine.replicas }}
+  selector:
+    matchLabels:
+      app: custom-alpine
+    {{- include "custom-alpine.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        app: custom-alpine
+      {{- include "custom-alpine.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+      - env:
+        - name: KUBERNETES_CLUSTER_DOMAIN
+          value: {{ quote .Values.kubernetesClusterDomain }}
+        image: {{ .Values.customAlpine.customAlpine.image.repository }}:{{ .Values.customAlpine.customAlpine.image.tag
+          | default .Chart.AppVersion }}
+        name: custom-alpine
+        resources: {}

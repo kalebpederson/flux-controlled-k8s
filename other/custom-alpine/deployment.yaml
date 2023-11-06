@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-alpine
+  namespace: secure-only
+  labels:
+    app: custom-alpine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-alpine
+  template:
+    metadata:
+      namespace: secure-only
+      labels:
+        app: custom-alpine
+    spec:
+      containers:
+      - name: custom-alpine
+        image: ttl.sh/kaleb/98456748971649817436/custom-alpine:0.13.0

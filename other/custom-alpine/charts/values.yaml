@@ -1,0 +1,7 @@
+customAlpine:
+  customAlpine:
+    image:
+      repository: ttl.sh/kaleb/98456748971649817436/custom-alpine
+      tag: 0.13.0
+  replicas: 1
+kubernetesClusterDomain: cluster.local
