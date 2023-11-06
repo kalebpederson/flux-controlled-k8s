@@ -12,3 +12,8 @@ custom-alpine-0.30.0: Digest: sha256:c3562ee53bc93fba3f1b0b78173563a3f482283d809
 custom-alpine-0.32.0: Digest: sha256:ebeabe8c1eec7fc3ffafd3bbe7f4cc44ffdaa62d6eadc45febcd34863f9fd3be
 custom-alpine-0.33.0: Digest: sha256:a437d7f483b9fd094c4493ef96d0ac75cb8fa86248d1c417c7d3c64c72c1d607
 custom-alpine-0.34.0: Digest: sha256:079b4431d8538c80fc7e83d79ddd42bd165e79e828f3b09ec23e24b02d2b546c
+custom-alpine-0.35.0: Digest: sha256:8537860172936ec2ba5cc682c29d838bd22f0f41710e6f59e237715a47df6ff4
+custom-alpine-0.36.0: Digest: sha256:ffe7f0a49bd73f457379905ec6956fac8ef798680668855eb25101278b74d6d0
+custom-alpine-0.37.0: Digest: sha256:3f5671b35573d8eca42a0ec0322e86948145a2c77115ad52c795e9ce107d8c41
+custom-alpine-0.37.0: Digest: sha256:133609f3c782f86c68db2440bfa0e3f4ecebc2337939330b07f131e2b8d03642
+custom-alpine-0.38.0: Digest: sha256:a2c2a4fa48da2e3c1c7b3503d5b8a48c8f4a11db17575a8dc7f889e6eac9ca30
