@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: custom-alpine
-      digest: sha256:a2c2a4fa48da2e3c1c7b3503d5b8a48c8f4a11db17575a8dc7f889e6eac9ca30 
+      version: "<1.0.0"
       sourceRef:
         kind: HelmRepository
         name: custom-alpine-helm-repo
