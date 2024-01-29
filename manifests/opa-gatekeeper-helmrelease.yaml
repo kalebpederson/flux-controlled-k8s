@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: opa-gatekeeper-helmrelease
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: gatekeeper/gatekeeper
+      reconcileStrategy: ChartVersion
+      version: ">=3.0.0 <4.0.0"
+      sourceRef:
+        kind: HelmRepository
+        name: opa-gatekeeper-source
+  interval: 15m0s

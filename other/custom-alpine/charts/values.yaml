@@ -2,6 +2,6 @@ customAlpine:
   customAlpine:
     image:
       repository: ttl.sh/kaleb/98456748971649817436/custom-alpine
-      digest: "sha256:0499d9f94678e912cd893eb1011c1496c3b304febe81b6267823f072303e1e19"
+      digest: "sha256:7191985668d9800bf43bab08eb4d364e067ebcc255ccf7ad13f4eca120a04017"
   replicas: 1
 kubernetesClusterDomain: cluster.local
