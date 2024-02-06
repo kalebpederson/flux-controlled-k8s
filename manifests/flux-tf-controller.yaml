@@ -38,10 +38,10 @@ spec:
     concurrency: 24
     resources:
       limits:
-        cpu: 1000m
-        memory: 2Gi
+        cpu: 500m
+        memory: 512Mi
       requests:
-        cpu: 400m
+        cpu: 100m
         memory: 64Mi
     caCertValidityDuration: 24h
     certRotationCheckFrequency: 30m
