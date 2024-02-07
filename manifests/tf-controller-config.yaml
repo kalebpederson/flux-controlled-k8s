@@ -13,3 +13,18 @@ spec:
     namespace: flux-system
   writeOutputsToSecret:
     name: flux-controlled-tf-secret
+  runnerPodTemplate:
+    spec:
+      image: azure_cli_runner
+      env:
+        - name: ARM_USE_OIDC
+          value: "false"
+        - name: ARM_TENANT_ID
+          value: "fc66f39d-4b15-41d3-b70c-4e583c808320"
+        - name: ARM_SUBSCRIPTION_ID
+          value: "904c6d56-bed5-4d1c-b415-041ad337f986"
+        - name: ARM_CLIENT_ID
+          value: "1f7ba0ef-8980-4f56-b4ae-1301e7161fc2"
+        - name: ARM_CLIENT_SECRET
+          value: "fc66f39d-4b15-41d3-b70c-4e583c808320"
+

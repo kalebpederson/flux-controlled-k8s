@@ -1,0 +1,4 @@
+*.swp
+
+# sensitive data
+.tf-runner-client-secret.yaml

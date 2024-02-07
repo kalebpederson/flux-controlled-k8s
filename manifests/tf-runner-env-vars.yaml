@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tf-runner-env-vars
+  namespace: flux-system
+data:
+  ARM_USE_OIDC: "false"
+  ARM_TENANT_ID: fc66f39d-4b15-41d3-b70c-4e583c808320 
+  ARM_SUBSCRIPTION_ID: 904c6d56-bed5-4d1c-b415-041ad337f986 
+  ARM_CLIENT_ID: 1f7ba0ef-8980-4f56-b4ae-1301e7161fc2
