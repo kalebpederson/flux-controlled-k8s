@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: tf-controller
+  name: tf-controller-hr
   namespace: flux-system
 spec:
   interval: 1h0s
@@ -20,7 +20,7 @@ spec:
       chart: tf-controller
       sourceRef:
         kind: HelmRepository
-        name: tf-controller
+        name: tf-controller-hr
       version: '>=0.16.0-rc.3'
   interval: 1h0s
   releaseName: tf-controller

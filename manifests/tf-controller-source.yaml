@@ -1,6 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
+  # -gr = git repository
   name: flux-controlled-tf-gr
   namespace: flux-system
 spec:
