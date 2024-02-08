@@ -16,7 +16,8 @@ spec:
   runnerPodTemplate:
     spec:
       # includes the azure cli enabling azure authentication
-      image: kppmetadatatesting.azurecr.io/tf-runner:1.7.2
+      # image: kppmetadatatesting.azurecr.io/tf-runner:1.7.2
+      image: ghcr.io/weaveworks/tf-runner-azure:v0.16.0-rc3
       envFrom:
         - configMapRef:
             name: tf-runner-env-vars

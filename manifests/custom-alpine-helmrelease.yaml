@@ -17,6 +17,6 @@ spec:
         provider: cosign
         secretRef:
           name: cosign-public-key
-  interval: 1m0s
+  interval: 10m
   targetNamespace: secure-only
-  timeout: 10m
+  timeout: 1m
