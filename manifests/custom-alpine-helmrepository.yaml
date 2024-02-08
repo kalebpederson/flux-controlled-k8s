@@ -1,9 +1,9 @@
-﻿apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
-metadata:
-  name: custom-alpine-helm-repo
-  namespace: flux-system
-spec:
-  type: "oci"
-  interval: 5m
-  url: oci://ttl.sh/kaleb/98456748971649817436/charts
+﻿# apiVersion: source.toolkit.fluxcd.io/v1beta2
+# kind: HelmRepository
+# metadata:
+#   name: custom-alpine-helm-repo
+#   namespace: flux-system
+# spec:
+#   type: "oci"
+#   interval: 5m
+#   url: oci://ttl.sh/kaleb/98456748971649817436/charts
