@@ -1,50 +1,50 @@
-apiVersion: policy.sigstore.dev/v1beta1
-kind: ClusterImagePolicy
-metadata:
-  name: image-policy
-spec:
-  images:
-  - glob: "**"
-  authorities:
-    # either of the keys below is reasonable
-  - name: signed-by-personal-cosign-key
-    key:
-      hashAlgorithm: sha256
-      secretRef:
-        name: cosign-public-key
-    attestations:
-    - name: must-have-spdx-sbom
-      predicateType: spdxjson
-      policy:
-        type: cue
-        data: |
-          predicateType: "https://spdx.dev/Document" 
-  - name: signed-by-stefanprodan-cosign-key
-    keyless:
-      identities:
-        - issuer: https://token.actions.githubusercontent.com
-          subject: https://github.com/stefanprodan/podinfo/.github/workflows/release.yml@refs/tags/6.5.2
-#      attestations:
-#      - name: custom-match-predicate
-#        predicateType: https://cosign.sigstore.dev/attestation/v1
-#        policy:
-#          type: cue
-#          data: |
-#            predicateType: "https://cosign.sigstore.dev/attestation/v1"
-#            predicate: "foobar key e2e test"
-# We can also do something more dynamic, where we refer to the public key
-# directly in Key Vault:
-#    - key:
-#        kms: azurekms://cosign-storage-kv2.vault.azure.net/cosignkey
-# Or do something different:
-#    - name: must-have-e2e-tests
-#      predicateType: https://cosign.sigstore.dev/attestation/v1
-#      policy:
-#        type: rego
-#        data: |
-#          package sigstore
-#          default isCompliant = false
-#          isCompliant {
-#            input.predicateType == "https://cosign.sigstore.dev/attestation/v1"
-#            input.predicate == "e2e-tests"
-#          }
+# apiVersion: policy.sigstore.dev/v1beta1
+# kind: ClusterImagePolicy
+# metadata:
+#   name: image-policy
+# spec:
+#   images:
+#   - glob: "**"
+#   authorities:
+#     # either of the keys below is reasonable
+#   - name: signed-by-personal-cosign-key
+#     key:
+#       hashAlgorithm: sha256
+#       secretRef:
+#         name: cosign-public-key
+#     attestations:
+#     - name: must-have-spdx-sbom
+#       predicateType: spdxjson
+#       policy:
+#         type: cue
+#         data: |
+#           predicateType: "https://spdx.dev/Document" 
+#   - name: signed-by-stefanprodan-cosign-key
+#     keyless:
+#       identities:
+#         - issuer: https://token.actions.githubusercontent.com
+#           subject: https://github.com/stefanprodan/podinfo/.github/workflows/release.yml@refs/tags/6.5.2
+# #      attestations:
+# #      - name: custom-match-predicate
+# #        predicateType: https://cosign.sigstore.dev/attestation/v1
+# #        policy:
+# #          type: cue
+# #          data: |
+# #            predicateType: "https://cosign.sigstore.dev/attestation/v1"
+# #            predicate: "foobar key e2e test"
+# # We can also do something more dynamic, where we refer to the public key
+# # directly in Key Vault:
+# #    - key:
+# #        kms: azurekms://cosign-storage-kv2.vault.azure.net/cosignkey
+# # Or do something different:
+# #    - name: must-have-e2e-tests
+# #      predicateType: https://cosign.sigstore.dev/attestation/v1
+# #      policy:
+# #        type: rego
+# #        data: |
+# #          package sigstore
+# #          default isCompliant = false
+# #          isCompliant {
+# #            input.predicateType == "https://cosign.sigstore.dev/attestation/v1"
+# #            input.predicate == "e2e-tests"
+# #          }
